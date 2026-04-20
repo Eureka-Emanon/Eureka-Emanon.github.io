@@ -247,8 +247,21 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#effect">Effect</a></li>
-    <li><a href="#structure">Structure</a></li>
-    <li><a href="#callback和表驱动">callback和表驱动</a></li>
+    <li><a href="#structure">Structure</a>
+      <ol>
+        <li><a href="#windows-gui程序-入口">windows GUI程序 入口</a></li>
+        <li><a href="#注册窗口类">注册窗口类</a></li>
+        <li><a href="#创建窗口">创建窗口</a></li>
+        <li><a href="#消息循环">消息循环</a></li>
+      </ol>
+    </li>
+    <li><a href="#callback和表驱动">callback和表驱动</a>
+      <ol>
+        <li><a href="#模拟消息处理">模拟消息处理</a></li>
+        <li><a href="#图形设备接口的虚拟表">图形设备接口的&quot;虚拟表&quot;</a></li>
+      </ol>
+    </li>
+    <li><a href="#source-code">source code</a></li>
   </ol>
 </nav>
         </div>
@@ -341,10 +354,8 @@
 <h2 id="effect">Effect
 </h2><p>这段代码实现了一个最基础的 Windows 窗口，并且能在窗口被遮挡或改变大小时，自动在白色和黑色之间来回刷新。</p>
 <h2 id="structure">Structure
-</h2><ol>
-<li>windows GUI程序 入口</li>
-</ol>
-<div class="highlight"><div class="chroma">
+</h2><h3 id="windows-gui程序-入口">windows GUI程序 入口
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -371,10 +382,8 @@
 <li>堆栈清理责任（被调用者清理）</li>
 </ul>
 </blockquote>
-<ol start="2">
-<li>注册窗口类</li>
-</ol>
-<div class="highlight"><div class="chroma">
+<h3 id="注册窗口类">注册窗口类
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -388,10 +397,8 @@
 </span></span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">RegisterClass</span><span class="p">(</span><span class="o">&amp;</span><span class="n">WindowClass</span><span class="p">)){...};</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ol start="3">
-<li>创建窗口</li>
-</ol>
-<p>根据已注册的窗口类，在屏幕上生成一个窗口实例。</p>
+</div><h3 id="创建窗口">创建窗口
+</h3><p>根据已注册的窗口类，在屏幕上生成一个窗口实例。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -400,10 +407,8 @@
 <pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">HWND</span> <span class="n">WindowHandle</span><span class="o">=</span><span class="n">CreateWindowEx</span><span class="p">(...);</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ol start="4">
-<li>消息循环</li>
-</ol>
-<p>Windows程序是事件驱动的。用户移动鼠标、点击按钮、重绘窗口等都会产生“消息”。消息循环负责不断从系统消息队列中取出消息，翻译（键盘消息），然后分发给对应的窗口过程。</p>
+</div><h3 id="消息循环">消息循环
+</h3><p>Windows程序是事件驱动的。用户移动鼠标、点击按钮、重绘窗口等都会产生“消息”。消息循环负责不断从系统消息队列中取出消息，翻译（键盘消息），然后分发给对应的窗口过程。</p>
 <ul>
 <li>
 <p>WindowClass.lpfnWndProc=MainWindowCallback; 将WindowClass的窗口处理过程绑定程序定义的MainWindowCallback。</p>
@@ -424,10 +429,8 @@
 <h2 id="callback和表驱动">callback和表驱动
 </h2><p>鉴于程序中大量使用了回调函数的结构，思考是必须的。
 回调函数给予了c程序更高的抽象能力，程序将自动执行被注册的回调函数，使程序员只需要关心编写的函数本身。</p>
-<ul>
-<li>模拟消息处理</li>
-</ul>
-<div class="highlight"><div class="chroma">
+<h3 id="模拟消息处理">模拟消息处理
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -527,10 +530,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>图形设备接口的&quot;虚拟表&quot;</li>
-</ul>
-<div class="highlight"><div class="chroma">
+</div><h3 id="图形设备接口的虚拟表">图形设备接口的&quot;虚拟表&quot;
+</h3><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -584,8 +585,8 @@
 </span></span><span class="line"><span class="cl"><span class="n">render</span><span class="o">-&gt;</span><span class="n">drawRect</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="source-code">source code
-</h1><div class="highlight"><div class="chroma">
+</div><h2 id="source-code">source code
+</h2><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
