@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Hello there.</title>
-        <link>http://localhost:1313/post/</link>
-        <description>Recent content in Posts on Hello there.</description>
+        <title>Handmadehero on Hello there.</title>
+        <link>http://localhost:1313/categories/handmadehero/</link>
+        <description>Recent content in Handmadehero on Hello there.</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>S.Dan</copyright>
-        <lastBuildDate>Mon, 20 Apr 2026 13:48:12 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>江流滚滚</title>
-        <link>http://localhost:1313/p/%E6%B1%9F%E6%B5%81%E6%BB%9A%E6%BB%9A/</link>
-        <pubDate>Sun, 19 Apr 2026 22:07:58 +0800</pubDate>
-        
-        <guid>http://localhost:1313/p/%E6%B1%9F%E6%B5%81%E6%BB%9A%E6%BB%9A/</guid>
-        <description>&lt;img src="http://localhost:1313/p/%E6%B1%9F%E6%B5%81%E6%BB%9A%E6%BB%9A/cover.jpg" alt="Featured image of post 江流滚滚" /&gt;&lt;p&gt;蒹葭苍苍，白露为霜&lt;/p&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Mon, 20 Apr 2026 13:48:12 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/handmadehero/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Handmadehero01-02</title>
         <link>http://localhost:1313/p/handmadehero01-02/</link>
         <pubDate>Mon, 20 Apr 2026 13:48:12 +0800</pubDate>

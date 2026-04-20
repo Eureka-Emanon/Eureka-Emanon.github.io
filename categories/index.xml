@@ -6,6 +6,15 @@
         <description>Recent content in Categories on Hello there.</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>S.Dan</copyright><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>S.Dan</copyright>
+        <lastBuildDate>Mon, 20 Apr 2026 13:48:12 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Handmadehero</title>
+        <link>http://localhost:1313/categories/handmadehero/</link>
+        <pubDate>Mon, 20 Apr 2026 13:48:12 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/handmadehero/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>
