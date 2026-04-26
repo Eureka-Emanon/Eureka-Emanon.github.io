@@ -15,6 +15,14 @@
         <guid>http://localhost:1313/categories/handmadehero/</guid>
         <description></description>
         </item>
+        <item>
+        <title>同载酒</title>
+        <link>http://localhost:1313/categories/%E5%90%8C%E8%BD%BD%E9%85%92/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E5%90%8C%E8%BD%BD%E9%85%92/</guid>
+        <description></description>
+        </item>
         
     </channel>
 </rss>
